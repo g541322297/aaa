@@ -1,0 +1,41 @@
+一、创建ssh-key
+1、桌面右键git bash here
+2、ssh-keygen -t rsa -C "邮箱"
+   回车记录一下保存rsa的路径，一路回车
+3、打开步骤2路径下的id_rsa.pub文件
+   复制里面内容备用
+4、登录github，点击头像右侧倒三角
+5、点击settings
+6、选择左侧ssh key and gpk keys
+7、点击右上角new ssh key按钮
+8、title随意
+   内容部分ctrl+v步骤三得到的key
+二、验证
+1、回到git bash窗口，输入:
+   ssh -T git@github.com
+   回车，输入yes再回车
+   直到提示"Hi xxx"
+2、验证邮箱和用户名
+git config --global user.name "用户名"
+git config --global user.email "邮箱"
+三、创建远程仓库
+四、创建本地仓库
+1、在某个文件夹内git bash here
+2、初始化
+  git init
+3、添加需要上传的文件
+  git add xxx.xxx
+4、提交更新
+  git commit -m "更新描述"
+5、指定远端仓库地址
+ git remote add origin git@github:用户名/仓库名
+6、推送
+ git push -u oringin master
+五、克隆
+1、在需要存放仓库的地方右键git bash here
+2、git clone 仓库地址 
+
+
+
+
+
